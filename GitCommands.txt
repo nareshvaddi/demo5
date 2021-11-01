@@ -1,0 +1,123 @@
+
+admin@DESKTOP-6LU970N MINGW64 /f/Github_Projects/app (raj)
+$ git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 5 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+admin@DESKTOP-6LU970N MINGW64 /f/Github_Projects/app (main)
+$ git branch tst
+
+admin@DESKTOP-6LU970N MINGW64 /f/Github_Projects/app (main)
+$ git branch -a
+* main
+  nareshvaddi
+  raj
+  tst
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/TEST
+  remotes/origin/anji
+  remotes/origin/main
+  remotes/origin/naresh
+  remotes/origin/nareshvaddi
+  remotes/origin/raj
+
+admin@DESKTOP-6LU970N MINGW64 /f/Github_Projects/app (main)
+$ git checkout tst
+Switched to branch 'tst'
+
+admin@DESKTOP-6LU970N MINGW64 /f/Github_Projects/app (tst)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> tst
+
+
+admin@DESKTOP-6LU970N MINGW64 /f/Github_Projects/app (tst)
+$ git status
+On branch tst
+nothing to commit, working tree clean
+
+admin@DESKTOP-6LU970N MINGW64 /f/Github_Projects/app (tst)
+$ pwd
+/f/Github_Projects/app
+
+admin@DESKTOP-6LU970N MINGW64 /f/Github_Projects/app (tst)
+$ ll
+total 1
+-rw-r--r-- 1 admin 197121 5 Oct 26 10:33 README.md
+
+admin@DESKTOP-6LU970N MINGW64 /f/Github_Projects/app (tst)
+$ git status
+On branch tst
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Notes.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+admin@DESKTOP-6LU970N MINGW64 /f/Github_Projects/app (tst)
+$ git add Notes.txt
+
+admin@DESKTOP-6LU970N MINGW64 /f/Github_Projects/app (tst)
+$ git status
+On branch tst
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Notes.txt
+
+
+admin@DESKTOP-6LU970N MINGW64 /f/Github_Projects/app (tst)
+$ git commit -m 'Adding new file'
+[tst b9c71e5] Adding new file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Notes.txt
+
+admin@DESKTOP-6LU970N MINGW64 /f/Github_Projects/app (tst)
+$ git push
+fatal: The current branch tst has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin tst
+
+
+admin@DESKTOP-6LU970N MINGW64 /f/Github_Projects/app (tst)
+$ git push --set-upstream origin tst
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 325 bytes | 108.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'tst' on GitHub by visiting:
+remote:      https://github.com/nareshvaddi/app/pull/new/tst
+remote:
+To https://github.com/nareshvaddi/app.git
+ * [new branch]      tst -> tst
+Branch 'tst' set up to track remote branch 'tst' from 'origin'.
+
+admin@DESKTOP-6LU970N MINGW64 /f/Github_Projects/app (tst)
+$
+
+How to clone the project/application?
+git clone repositoryURL  --> this is used for getting application from remote to local
+
+git add filename/./*.java --> this is used for adding files from unstage to stage
+git status  --> this is used for to check what is the current status of the files
+git commit -m 'commit message' ---> this is used for copy local system to local git
+git push --> this is used for copy files from local git to remote git
+
+git branch -a --> this is used for to display all branches
+
+git pull  --> this is used for get the git remote files to local git
+
+git branch branchname --> this is used for create a branch
+git checkout branchname  --> this is used for swith from one branch to another
+
