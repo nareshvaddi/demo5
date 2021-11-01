@@ -1,7 +1,6 @@
 package com.example.demo4;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class flowersnames {
 	
 	@GetMapping("/flowers")
-	public String flowers() {
+	public String flowers() 
+	{
+		
+		
 		return "ALL FLOWERS ARE WELL" ;
 	}
 		
